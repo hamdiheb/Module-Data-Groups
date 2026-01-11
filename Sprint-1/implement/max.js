@@ -1,13 +1,22 @@
 function findMax(elements) {
+    
     const arrayFiltered = elements.filter((element) =>typeof element === 'number');
-    let max=0;
-    for(let i=0;i<arrayFiltered.length;i++){
-        if(arrayFiltered[i]>max){
-            max=arrayFiltered[i];
-        }
+    // let max=0;
+
+    if(elements.length === 0){
+        return -Infinity;
     }
-    return max;
+    else{
+    // for(let i=0;i<arrayFiltered.length;i++){
+    //     if(arrayFiltered[i]>max){
+    //         max=arrayFiltered[i];
+    //     }
+    // }
+    return Math.max(...arrayFiltered);
+    }
+    // return max;
+    
 }
 
-console.log(findMax(['hey', 10, 'hi', 60, 10]));
+console.log(findMax([2.5,3.77,3]));
 module.exports = findMax;
