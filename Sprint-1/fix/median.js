@@ -8,14 +8,15 @@
 
 function calculateMedian(list) {
 
-    if(list.length <= 1){
+    const check=Array.isArray(list);
+    if(!check || list.length <=1){
         return null;
     }
     else{
+
     const listNumber = list.filter((element) => typeof element ==='number');
     const listnumberOrdered = listNumber.sort((a, b) => a - b);
     const pos = Math.floor(listnumberOrdered.length/2);
-    
     
     if(listNumber.length === 0){
         return null;
@@ -26,10 +27,8 @@ function calculateMedian(list) {
     else{
         return listnumberOrdered[pos-1]+0.5;
     } 
-    }
+}    
 }
 
-console.log(calculateMedian(["apple", null, undefined]));
-module.exports = calculateMedian;
 
-//, 123, null, undefined, {}, [], ["apple", null, undefined]
+module.exports = calculateMedian;
