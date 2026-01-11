@@ -15,4 +15,5 @@ function dedupe(list) {
     return list;
 }
 
-console.log(dedupe(['a','b','c',1]));
+
+module.exports = dedupe;
