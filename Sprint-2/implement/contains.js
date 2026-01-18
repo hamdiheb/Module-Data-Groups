@@ -1,8 +1,7 @@
-function contains(object, chara) {
-    const obj = object;
-    const char = chara;
+function contains(object, char) {
+
     let check = false;
-    const keysArray = Object.keys(obj);
+    const keysArray = Object.keys(object);
 
     for(const element in keysArray){
         if(keysArray[element] === char){
