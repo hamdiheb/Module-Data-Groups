@@ -7,7 +7,6 @@ test("Return object by keys and values", ()=> {
   expect(createLookup(target)).toEqual(output);
 })
 
-
 /*
 
 Create a lookup object of key value pairs from an array of code pairs
