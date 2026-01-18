@@ -13,6 +13,7 @@ const author = {
   alive: true,
 };
 
+
 for (const value in author) {
   console.log(author[value]);
 }
