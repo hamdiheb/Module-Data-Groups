@@ -11,6 +11,5 @@ function contains(object, char) {
     return check;
 }
 
-
 module.exports = contains;
 
