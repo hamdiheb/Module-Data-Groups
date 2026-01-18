@@ -11,6 +11,6 @@ function contains(object, char) {
     return check;
 }
 
-console.log(contains({a: 1, b: 2}, 'f'));
+
 module.exports = contains;
 
