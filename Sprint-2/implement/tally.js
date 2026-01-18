@@ -32,5 +32,6 @@ function tally(str) {
     }
 }
 
+
 module.exports = tally;
 
