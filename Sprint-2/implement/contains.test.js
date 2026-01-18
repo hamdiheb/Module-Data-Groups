@@ -46,3 +46,4 @@ test("Return false for non-existen property name", ()=>{
 test("Return false for invalid paramters like an array", ()=> {
     expect(contains({a:1, b:2}, [1,2])).toEqual(false);
 })
+

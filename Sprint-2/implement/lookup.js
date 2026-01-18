@@ -12,5 +12,6 @@ function createLookup(countryCurrencyPairs) {
   return obj;
 }
 
+
 module.exports = createLookup;
 
