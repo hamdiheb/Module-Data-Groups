@@ -1,8 +1,15 @@
-function tally() {
-    const str = ['a', 'a', 'a'];
+function tally(str) {
+    
     const strNew = str;
     const object = {};
 
+    if(str.length === 0){
+        return object;
+    }
+    else if(Array.isArray(str) === false){
+        return 'Error';
+    }
+    else{
     for(let i=0;i<str.length;i++){
         let key='';
         let value=0;
@@ -22,21 +29,8 @@ function tally() {
         }
     }
     return object;
+    }
 }
 
-console.log(tally());
 module.exports = tally;
 
-/**
- * tally array
- *
- * In this task, you'll need to implement a function called tally
- * that will take a list of items and count the frequency of each item
- * in an array
- *
- * For example:
- *
- * tally(['a']), target output: { a: 1 }
- * tally(['a', 'a', 'a']), target output: { a: 3 }
- * tally(['a', 'a', 'b', 'c']), target output: { a : 2, b: 1, c: 1 }
- */
