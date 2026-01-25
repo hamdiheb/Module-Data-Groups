@@ -21,3 +21,11 @@ nextButton.addEventListener("click", () => {
    catImage.src = images[pos];
 })
 
+backButton.addEventListener("click", () => {
+    if(pos!=0){
+        pos=pos-1;
+    }else{
+        pos=pos;
+    }
+    catImage.src = images[pos];
+})
