@@ -1,25 +1,25 @@
 function setAlarm() {
-  const timerInput = Number(document.getElementById("alarmSet").value);
-  const timeRemaining = document.getElementById("timeRemaining");
-  let minutes = Math.floor(timerInput/60);
-  let seconds = Math.floor(timerInput%60);
-  const Timer=setInterval(timerUpdate, 1000);
+    const timerInput = Number(document.getElementById("alarmSet").value);
+    const timeRemaining = document.getElementById("timeRemaining");
+    let minutes = Math.floor(timerInput/60);
+    let seconds = Math.floor(timerInput%60);
+    const Timer=setInterval(timerUpdate, 1000);
 
-  function timerUpdate(){
-    if(seconds !=0){
-      timeRemaining.innerText = `Time Remaining : ${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`
-      seconds=seconds-1;
-    }else if(minutes !=0){
-      timeRemaining.innerText = `Time Remaining : ${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`
-      minutes=minutes-1;
-      seconds=60
-    }else{
-      timeRemaining.innerText = `Time Remaining : 00:00`;
-      clearInterval(Timer);
-      playAlarm();
+    function timerUpdate(){
+      if(seconds !=0){
+        timeRemaining.innerText = `Time Remaining : ${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`
+        seconds=seconds-1;
+      }else if(minutes !=0){
+        timeRemaining.innerText = `Time Remaining : ${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`
+        minutes=minutes-1;
+        seconds=60
+      }else{
+        timeRemaining.innerText = `Time Remaining : 00:00`;
+        clearInterval(Timer);
+        playAlarm();
+      }
     }
   }
-}
 
 // DO NOT EDIT BELOW HERE
 
