@@ -29,6 +29,7 @@ function addNewTodo(event) {
   const newlistitem = document.createElement('li');
   todoList.append(newlistitem);
   newlistitem.innerText = `Task: ${todoinput.value} Progress: false`;
+  todoinput.value = ``;
 }
 
 // Advanced challenge: Write a fucntion that checks the todos in the todo list and deletes the completed ones (we can check which ones are completed by seeing if they have the line-through styling applied or not).
