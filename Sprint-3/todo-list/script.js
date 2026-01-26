@@ -5,14 +5,7 @@ todoList.setAttribute('id','todo-list');
 
 function populateTodoList(todos) {
   let list = document.getElementById("todo-list");
-  // Write your code to create todo list elements with completed and delete buttons here, all todos should display inside the "todo-list" element.
-  const newtodo = document.createElement("li");
-  let alltodo = [];
-  list.append(newtodo);
-  todos.forEach(element => {
-    alltodo.push(`<li>Task Name: ${element.task} Progress Status: ${element.completed}</li><button>Delete</button>`);
-  });
-  newtodo.innerHTML=`${alltodo.join('')}`;
+  list.innerHTML = todos.map((element) => `<li>Task: ${element.task} Progress ${element.completed} <button>Delete</button></li>`).join('');
 }
 
 // These are the same todos that currently display in the HTML
