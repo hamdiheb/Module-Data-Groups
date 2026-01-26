@@ -21,12 +21,9 @@ function addNewTodo(event) {
   event.preventDefault();
   const todoinput = document.querySelector('input');
   const form = document.querySelector('form');
-  const newlist = document.createElement('ul');
   const newlistitem = document.createElement('li');
 
-  form.append(newlist);
-
-  newlist.append(newlistitem);
+  form.append(newlistitem);
   newlistitem.innerText = `${todoinput.value}`
 
   // Write your code here... and remember to reset the input field to be blank after creating a todo!
